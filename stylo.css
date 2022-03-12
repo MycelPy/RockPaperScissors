@@ -1,16 +1,19 @@
 html,
 body {
     height: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex: 1;
     font-family: 'Roboto', sans-serif;
 }
 
 .container {
     display: flex;
     justify-content: space-between;
+    justify-content: center;
+    align-items: center;
+}
+
+.scoreboard {
+    display: flex;
+    justify-content: space-evenly;
 }
 
 button {
@@ -21,4 +24,9 @@ button {
     background-color: black;
     color: white;
     font-size: 50px;
+}
+
+.tab {
+    display: flex;
+    justify-content: center;
 }
