@@ -16,18 +16,20 @@ buttons.forEach(button => button.addEventListener('click', (e) => {
         return arr[Math.floor(Math.random() * arr.length)]
     }
 
-    if (computerPlay() === playerPlay) {
+    let pc = computerPlay()
+
+    if (pc === playerPlay) {
         draw += 1
         drawko.textContent = `${draw}`
-        tab.textContent = `Draw! Player: ${playerPlay} Computer: ${computerPlay()}`
+        tab.textContent = `Draw! Player: ${playerPlay} Computer: ${pc}`
     } else
-    if (computerPlay() === 'rock' && playerPlay === 'paper' || computerPlay() === 'paper' && playerPlay === 'scissors' || computerPlay() === 'scissors' && playerPlay === 'rock') {
+    if (pc === 'rock' && playerPlay === 'paper' || pc === 'paper' && playerPlay === 'scissors' || pc === 'scissors' && playerPlay === 'rock') {
         player += 1
         playerko.textContent = `${player}`
-        tab.textContent = `Player wins round! Player: ${playerPlay} Computer: ${computerPlay()}`
+        tab.textContent = `Player wins round! Player: ${playerPlay} Computer: ${pc}`
     } else {
         computer += 1
         computerko.textContent = `${computer}`
-        tab.textContent = `Computer wins round! Player: ${playerPlay} Computer: ${computerPlay()}`
+        tab.textContent = `Computer wins round! Player: ${playerPlay} Computer: ${pc}`
     }
 }))
